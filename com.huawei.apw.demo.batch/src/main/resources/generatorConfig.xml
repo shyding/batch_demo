@@ -24,16 +24,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- 生成模型的包名和位置 -->
-        <javaModelGenerator targetPackage="com.huawei.apw.demo.batch.beans" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.liquid.apw.demo.batch.beans" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置 -->
-        <sqlMapGenerator targetPackage="com.huawei.apw.demo.batch.orm" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="com.liquid.apw.demo.batch.orm" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置 -->
-        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.huawei.apw.demo.batch.orm.dao" implementationPackage="com.huawei.apw.demo.batch.orm.dao"  targetProject="src/main/java">
+        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.liquid.apw.demo.batch.orm.dao" implementationPackage="com.liquid.apw.demo.batch.orm.dao"  targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         

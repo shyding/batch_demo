@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.huawei.apw.demo.batch" />
+        <module name="com.liquid.apw.demo.batch" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="com.huawei.apw.demo.batch" target="1.8" />
+      <module name="com.liquid.apw.demo.batch" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
