@@ -32,7 +32,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
@@ -74,7 +74,7 @@
         </entry>
       </file>
       <file leaf-file-name="BatchConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/batch/BatchConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/batch/BatchConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
@@ -128,7 +128,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/Application.java" />
       </list>
     </option>
   </component>
@@ -489,7 +489,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -525,7 +525,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/batch/BatchConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/batch/BatchConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
@@ -586,7 +586,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/batch/BatchConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/batch/BatchConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
@@ -645,7 +645,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/apw/demo/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liquid/apw/demo/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
