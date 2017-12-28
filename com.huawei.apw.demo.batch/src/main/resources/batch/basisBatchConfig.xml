@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/batch
+       http://www.springframework.org/schema/batch/spring-batch.xsd">
+
+    <!-- 数据源配置文件，此处略 -->
+    <import resource="spring-config-db.xml"></import>
+
+    <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository" />
+    </bean>
+
+    <!-- Persist batch metadata in-memory -->
+    <!--<bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">-->
+        <!--<property name="transactionManager" ref="transactionManager" />-->
+    <!--</bean>-->
+
+    <!-- Persist batch metadata in database -->
+    <bean id="jobRepository" class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="databaseType" value="MySQL"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- Mybatis ItemReader 其中queryId：对应Mapper xml文件中的id，此处为空，因要在代码中动态填充 -->
+    <bean id="itemReader" class="org.mybatis.spring.batch.MyBatisPagingItemReader" scope="prototype">
+        <property name="sqlSessionFactory" ref="resellSqlSessionFactory" />
+        <property name="pageSize" value="1000"/>
+        <property name="queryId" value="" />
+    </bean>
+
+    <!-- Mybatis ItemWriter 其中statementId：对应Mapper xml文件中的id，此处为空，因要在代码中动态填充 -->
+    <bean id="itemWriter" class="org.mybatis.spring.batch.MyBatisBatchItemWriter" scope="prototype">
+        <property name="sqlSessionFactory" ref="resellSqlSessionFactory"/>
+        <property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
+        <property name="statementId" value=""/>
+    </bean>
+
+    <!-- Job创建工厂 -->
+    <bean id="jobBuilderFactory" class="org.uugu.core.common.support.CustomJobBuilderFactory">
+        <constructor-arg index="0" ref="jobRepository"/>
+    </bean>
+
+    <!-- Step创建工厂 -->
+    <bean id="stepBuilderFactory" class="org.springframework.batch.core.configuration.annotation.StepBuilderFactory">
+        <constructor-arg index="0" ref="jobRepository"/>
+        <constructor-arg index="1" ref="transactionManager"/>
+    </bean>
+
+    <!-- Spring线程池 -->
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="5"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="queueCapacity" value="30"/>
+    </bean>
+
+    <!--<bean id="daySettleInfoTasklet" class="org.uugu.core.service.daysettle.batchleInfoTasklet" lazy-init="true">-->
+    <!--</bean>-->
+
+    <!--<batch:job id="daySettleInfoJob" job-repository="jobRepository">-->
+        <!--<batch:step id="step1">-->
+            <!--<tasklet>-->
+                <!--<chunk reader="itemReader" processor="daySettleInfoProcessor" writer="itemWriter"-->
+                       <!--commit-interval="2"/>-->
+            <!--</tasklet>-->
+            <!--&lt;!&ndash;<tasklet ref="daySettleInfoTasklet"/>&ndash;&gt;-->
+        <!--</batch:step>-->
+    <!--</batch:job>-->
+</beans>
