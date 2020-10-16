@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+.dangerousButtonClass {
+    font-style: italic;
+    color: #fb0707
+}
